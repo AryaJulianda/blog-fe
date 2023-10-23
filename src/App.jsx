@@ -1,12 +1,19 @@
 import Dashboard from "./page/Dashboard";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DetailArticle from "./page/DetailArticle";
+import MyArticles from "./page/MyArticles";
+import AddArticle from "./page/AddArticle";
+import EditArticle from "./page/EditArticle";
 
 const App = () => {
   return (
   <BrowserRouter>
     <Routes>
-      <Route path='/' element={<Navigate to='/dashboard' replace={true} /> } />
-      <Route path='/dashboard' element={<Dashboard/>} />
+      <Route path='/' element={<Dashboard/>} />
+      <Route path='/detail/:id' element={<DetailArticle/>} />
+      <Route path='/myArticles' element={<MyArticles/>} />
+      <Route path='/myArticles/add' element={<AddArticle/>} />
+      <Route path='/myArticles/edit/:id' element={<EditArticle/>} />
     </Routes>
   </BrowserRouter>
   )

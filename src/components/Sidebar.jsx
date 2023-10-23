@@ -1,22 +1,23 @@
 import React from "react"
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+  const navigate = useNavigate()
   return (
-    <div className="w-[20%]">
-      <div className="w-[20%] fixed top-0 bottom-0 py-12 px-7 flex flex-col bg-white items-center gap-4 shadow-lg max-xl:py-10 max-xl:px-5 max-lg:py-8 max-lg:px-4">
-        <div className="flex bg-[#C4C4C4] py-4 px-[84px] justify-center max-xl:py-3 max-xl:px-20 max-lg:py-2 max-lg:px-16">
-          <img src="/icon/gallery.svg" alt="gallery" className="w-6 h-6 max-xl:w-5 max-xl:h-5 max-lg:w-4" />
+    <div className="min-w-[20%]">
+      <div className="w-[20%] fixed top-0 bottom-0 p-7 flex flex-col bg-secondary items-center gap-4 shadow-lg max-xl:p-5 max-lg:p-4">
+        <div className="bg-primary w-full p-3 rounded-xl max-xl:p-2 max-xl:gap-2">
+          <h1 className="text-xl font-bold text-center text-lime-500">jedaNgoding;</h1>
         </div>
-        <div className="bg-[#f0f0f0] w-full p-3 rounded-xl flex flex-row gap-3 max-xl:p-2 max-xl:gap-2">
-          <img src="/icon/default-profile.svg" alt="" className="w-8" />
-          <div className="flex flex-col">
-            <h1 className="text-base font-semibold text-[#064061] max-lg:text-sm">Lekan Okeowo</h1>
-            <h2 className="text-[#aaa] text-xs max-lg:text-[10px]">demo@gmail.com</h2>
-          </div>
-        </div>
-        <div className="flex flex-row w-full py-3 gap-4 border-e-4 border-primary-blue cursor-pointer">
+
+        <div className="flex flex-row w-full py-3 gap-4 border-e-4 border-transparent hover:border-lime-500 cursor-pointer" onClick={()=>navigate('/')}>
           <img src="/icon/dashboard.svg" alt="" className="w-6 max-lg:w-5" />
-          <h1 className="text-base max-lg:text-sm">Dashboard</h1>
+          <a className="text-base font-semibold text-white max-lg:text-sm ">Dashboard</a>
+        </div>
+
+        <div className="flex flex-row w-full py-3 gap-4 border-e-4 border-transparent hover:border-lime-500 cursor-pointer" onClick={()=>navigate('/myArticles')}>
+          <img src="/icon/article.svg" alt="" className="w-6 max-lg:w-5" />
+          <a className="text-base font-semibold text-white max-lg:text-sm ">My Articles</a>
         </div>
       </div>
     </div>

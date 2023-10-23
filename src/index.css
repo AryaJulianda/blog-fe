@@ -6,6 +6,7 @@
   html {
     font-family: 'Montserrat', sans-serif;
     max-width: 1440px;
+    background: #0F0F0F;
   }
   ::-webkit-scrollbar {
     /* width: 0px; */
