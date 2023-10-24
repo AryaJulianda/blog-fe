@@ -1,4 +1,4 @@
-<h3 align="center">Technical Test - Front End Developer</h3>
+<h3 align="center">jedaNgoding - Blog Website (Front End)</h3>
 
 <!-- ABOUT THE PROJECT -->
 
@@ -10,7 +10,7 @@ This app was built with some technologies below:
 - Node JS
 - Tailwind CSS
 - Axios
-- Mirage JS
+- Redux
 
 ## 🔥 Getting Started
 
@@ -26,13 +26,13 @@ Before going to the installation stage there are some software that must be inst
 - Clone the repo
 
 ```
-git clone https://github.com/AryaJulianda/technical-test-fe-dev.git
+git clone https://github.com/AryaJulianda/blog-fe.git
 ```
 
 - Go To Folder Repo
 
 ```
-cd technical-test-fe-dev
+cd blog-fe
 ```
 
 - Install Module
