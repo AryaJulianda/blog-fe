@@ -32,7 +32,7 @@ git clone https://github.com/AryaJulianda/blog-fe.git
 - Go To Folder Repo
 
 ```
-cd technical-test-fe-dev
+cd blog-fe
 ```
 
 - Install Module
