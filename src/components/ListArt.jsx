@@ -16,12 +16,12 @@ const listArt = ({ header,myArt }) => {
       {listArticles.map((value,index)=>{
         return(
           <div className={`w-full flex flex-row p-6 gap-6 bg-secondary rounded-xl shadow-sm max-xl:p-5 max-xl:gap-5 max-lg:p-4 max-lg:gap-4 `} key={index}>
-            <div className="min-w-[30%] h-52 bg-black rounded-xl bg-cover bg-center flex justify-center items-center" style={{backgroundImage:`url(${value?.img}`}}>{value?.img=='not found' && (<p className="text-white text-lg font-semibold">No Image</p>)}</div>
+            <div className="min-w-[30%] h-52 bg-black rounded-xl bg-cover bg-center flex justify-center items-center" style={{backgroundImage:`url(${value?.img}`}}>{value?.img==null && (<p className="text-white text-lg font-semibold">No Image</p>)}</div>
             <div className="w-full flex flex-col justify-between">
               <h1 className="text-2xl font-semibold text-white hover:text-lime-500 cursor-pointer hover:underline" onClick={()=>navigate('/detail/'+value?.id)}>{value?.title}</h1>
               <div className="flex flex-row justify-between gap-2">
                 <div className="flex-1">
-                  <p className="text-lg font-semibold text-lime-500">{value?.authorName}</p>
+                  <p className="text-lg font-semibold text-lime-500">{value?.author_name}</p>
                   <p className="text-lg font-semibold text-white">{ format(new Date(value?.date), 'd MMMM yyyy')}</p>
                 </div>
                 {myArt==true &&

@@ -58,7 +58,7 @@ export const updateArticle = (id,formData,navigate) => {
       dispatch({type:'PUT_ARTICLE_SUCCESS',payload:res.data})
       navigate('/myArticles')
     } catch (error) {
-      dispatch({type:'PUT_ARTICLE_FAILED',error:error.message})
+      dispatch({type:'PUT_ARTICLE_FAILED',error:error})
     }
   }
 }
