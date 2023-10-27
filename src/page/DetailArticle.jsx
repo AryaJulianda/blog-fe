@@ -36,7 +36,7 @@ const DetailArticle = (props) => {
             </div>
           </div>
           <p className="text-lg font-medium text-white">
-            {formatContent(article?.content)}
+            {article && formatContent(article?.content)}
           </p>
         </div>
       </div>
