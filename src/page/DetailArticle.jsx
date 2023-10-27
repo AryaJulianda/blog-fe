@@ -32,7 +32,7 @@ const DetailArticle = (props) => {
             <div className="w-[50%] h-80 bg-black rounded-xl bg-cover bg-center flex justify-center items-center" style={{backgroundImage:`url('${article?.img}')`}}>{article.img==null && (<p className="text-white text-lg font-semibold">No Image</p>)}</div>
             <div className="text-right">
               <p className="text-lg font-semibold text-lime-500">{article?.author_name}</p>
-              <p className="text-lg font-semibold text-white">{ format(new Date(article?.date), 'd MMMM yyyy')}</p>
+              <p className="text-lg font-semibold text-white">{article && format(new Date(article?.date), 'd MMMM yyyy')}</p>
             </div>
           </div>
           <p className="text-lg font-medium text-white">
