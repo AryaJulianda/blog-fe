@@ -6,8 +6,7 @@ const FormArticle = ({submitAction,edit}) => {
   const [articleData, setArticleData] = useState({
     title: '',
     img: undefined,
-    content: '',
-    author_name:''
+    content: ''
   });
 
   const handleInputChange = (e) => {
@@ -23,7 +22,6 @@ const FormArticle = ({submitAction,edit}) => {
   const handleSubmit = () => {
     const formData = new FormData();
     formData.append('title', articleData.title);
-    formData.append('author_name', articleData.author_name);
     articleData.img && formData.append('img', articleData.img);
     formData.append('content', articleData.content);
     // formData.forEach((value, key) => {
@@ -38,17 +36,11 @@ const FormArticle = ({submitAction,edit}) => {
       setArticleData({
         title: article.title,
         content: article.content,
-        author_name: article.author_name
       });
     }
   }, [edit, article]);
   return (
     <div className={`w-full flex flex-col p-5 gap-6 justify-between items-center bg-secondary rounded-xl shadow-sm shadow-lime-500 max-xl:p-5 max-xl:gap-5 max-lg:p-4 max-lg:gap-4 `}>
-      {/* author_name */}
-      <div className="w-full flex flex-col gap-2">
-        <label htmlFor="author_name" className="text-lg font-semibold text-white">Author Name</label>
-        <input type="text" id="author_name" className="bg-primary rounded-lg p-2 text-white" placeholder="Write Author Name for article" value={articleData.author_name} onChange={handleInputChange}/>
-      </div>
       {/* title */}
       <div className="w-full flex flex-col gap-2">
         <label htmlFor="title" className="text-lg font-semibold text-white">Title</label>

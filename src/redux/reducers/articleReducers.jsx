@@ -41,6 +41,21 @@ export const articleReducers = (state = initialState, action) => {
           isLoading:false
         }
 
+      // get my articles
+      case 'GET_MY_ARTICLES_SUCCESS':
+        return {
+            ...state,
+            listArticles: action.payload,
+            isLoading:false
+
+        };
+      case 'GET_MY_ARTICLES_FAILED':
+        return {
+          ...state,
+          isError: true,
+          isLoading:false
+        }
+
       // post article
       case 'POST_ARTICLE_SUCCESS':
         return {

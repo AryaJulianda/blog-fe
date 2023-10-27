@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { Fragment, useEffect } from "react"
 import Sidebar from "../components/Sidebar";
 import { useParams } from "react-router-dom";
 import { getArticleById } from "../redux/actions/articleAction";
@@ -13,6 +13,15 @@ const DetailArticle = (props) => {
     dispatch(getArticleById(id))
     console.log({article})
   },[])
+
+  const formatContent = (content) => {
+    return content.split('\n').map((text, index) => (
+      <Fragment key={index}>
+        {text}
+        <br />
+      </Fragment>
+    ));
+  };
   return (
     <div className="flex flex-row w-full min-h-screen">
       <Sidebar />
@@ -27,7 +36,7 @@ const DetailArticle = (props) => {
             </div>
           </div>
           <p className="text-lg font-medium text-white">
-            {article?.content}
+            {formatContent(article?.content)}
           </p>
         </div>
       </div>

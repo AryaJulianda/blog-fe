@@ -2,12 +2,12 @@ import React, { useEffect } from "react"
 import Sidebar from "../components/Sidebar";
 import ListArt from "../components/ListArt";
 import { useDispatch } from "react-redux";
-import { getAllArticles } from "../redux/actions/articleAction";
+import {  getMyArticles } from "../redux/actions/articleAction";
 
 const MyArticles = (props) => {
   const dispatch = useDispatch();
   useEffect(()=>{
-    dispatch(getAllArticles())
+    dispatch(getMyArticles())
   },[])
 
   return (
